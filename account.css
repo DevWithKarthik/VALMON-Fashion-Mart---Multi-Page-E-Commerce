@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Story+Script&family=Tagesschrift&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --halfbody-image: #f5f2ee;
+    --font1: "Story Script", sans-serif;
+    --font2: "Tagesschrift", system-ui;
+    --font3: "Cinzel", serif;
+    --font4: "Zalando Sans Expanded", sans-serif;
+    --font5: "Gravitas One", serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--halfbody-color);
+    overflow-x: hidden;
+}
+
+/*BackGround IMage...............................................*/
+
+.bg {
+    height: 580px;
+    /*border: 1px solid;*/
+    width: auto;
+    background-image: url(/jawabg-wishlist.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .bg {
+        transition: 0.3s;
+        height: 300px;
+    }
+}
+
+@media (max-width: 420px) {
+    .bg {
+        transition: 0.3s;
+        height: 250px;
+    }
+}
+
+/*....................Navbar..............................*/
+
+.bg .navbar {
+
+    margin-top: 30px;
+    height: 70px;
+    width: 95%;
+    background-color: #f5f2ee;
+    /*border: 1px solid;*/
+    border-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.bg {
+    .nav1 {
+        flex-grow: 1;
+        padding-left: 30px;
+    }
+
+    .nav2 {
+
+        flex-grow: 2;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 0;
+        }
+
+        li {
+            font-size: 18px;
+            font-weight: 600;
+            color: grey;
+
+            a {
+                text-decoration: none;
+                color: grey;
+            }
+        }
+
+
+
+    }
+
+    .nav2:hover {
+        cursor: pointer;
+
+    }
+
+    .nav2 li:hover {
+        a {
+            color: black;
+        }
+
+        transition: 0.3s;
+        transform: scale(1.08);
+    }
+
+    .nav3 {
+        flex-grow: 1;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 0;
+        }
+    }
+
+    .nav3 ul .sicon:hover {
+        transform: scale(1.7);
+        transition: 0.3s;
+    }
+
+    .nav3 ul .sicon1:hover {
+        transform: scale(1.15);
+        transition: 0.3s;
+    }
+
+    .nav3 .sicon1 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+}
+
+.menu-icon {
+    display: none;
+    /* outside media query — hides everywhere */
+}
+
+/*..............Nav-Bar-Media.....................*/
+
+@media screen and (max-width: 919px) {
+
+    /* Hide Account text, only icon */
+    .bg .navbar .nav3 li:has(.fa-user) {
+        font-size: 0;
+    }
+
+    .bg .navbar .nav3 li .fa-user {
+        font-size: 20px;
+        color: #333;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .bg .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #f5f2ee;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        height: 50px;
+    }
+
+    .bg .nav3 {
+        flex-grow: 0;
+    }
+
+    /* Hamburger visible on mobile */
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 8px;
+    }
+
+    .menu-icon i {
+        font-size: 20px;
+        color: #333;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon:active i {
+        transform: scale(0.9);
+    }
+
+    /* Logo */
+    .bg .navbar .nav1 {
+        flex-grow: 0;
+        padding-left: 0;
+    }
+
+    .bg .navbar .nav1 img {
+        height: 20px;
+    }
+
+    /* Hide big nav links initially */
+    .bg .navbar .nav2 {
+        display: none;
+    }
+
+    /* Mobile dropdown when toggled by JS */
+    .bg .navbar .nav2.open {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f5f2ee;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        animation: slideDown 0.3s ease forwards;
+        z-index: 999;
+    }
+
+    .bg .navbar .nav2.open ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Right section (search + cart) */
+    .bg .navbar .nav3 {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .bg .navbar .nav3 ul {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bg .navbar .nav3 li {
+        list-style: none;
+        font-size: 20px;
+        color: #333;
+    }
+
+    /* Hide Account text, only icon */
+    .bg .navbar .nav3 li:has(.fa-user) {
+        font-size: 0;
+    }
+
+    .bg .navbar .nav3 li .fa-user {
+        font-size: 18px;
+        color: #333;
+    }
+
+    /* Search overlay responsiveness */
+    .search10 {
+        width: 90%;
+        height: auto;
+        padding: 20px 15px;
+        border-radius: 10px;
+        gap: 1rem;
+    }
+
+    .search10 input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .search10 button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search10 p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* Smooth dropdown animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media (max-width: 440px) {
+
+    .nav3 ul .sicon i,
+    .sicon1 i {
+        font-size: 14px;
+    }
+
+    .bg .navbar .nav3 li .fa-user {
+        font-size: 14px;
+    }
+}
+
+/*Navbar - Shop Hover...............................................*/
+
+.bg .shopscroll {
+    height: 550px;
+    width: 85%;
+    /*border: 1px solid;*/
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: none;
+    z-index: 999;
+
+}
+
+.shopscroll {
+
+    .scroll1 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 300px;
+        /*border: 1px solid;*/
+
+        ul {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: 600;
+            }
+
+            li {
+                font-size: 18px;
+                font-weight: 400;
+                color: rgb(128, 128, 128);
+                padding-bottom: 5px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            li:hover {
+                color: black;
+                transform: translateX(10px);
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+    .scroll2 {
+        margin-top: 15px;
+        height: 200px;
+        /*border: 1px solid;*/
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        img {
+            border-radius: 10px;
+            height: 180px;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            transition: .3s;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bg .shopscroll {
+        display: none !important;
+    }
+}
+
+/*Navbar - Collections Hover...............................................*/
+
+.bg .collecti {
+    height: 250px;
+    width: 95%;
+    border: 1px solid;
+    margin-top: 120px;
+    border-color: transparent;
+    position: absolute;
+    background-color: white;
+    display: none;
+    z-index: 999;
+}
+
+.collecti {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    left: 25px;
+    border-radius: 10px;
+
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 10px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px 5px grey;
+        }
+
+        a {
+            text-decoration: none;
+            color: grey;
+            font-weight: 600;
+        }
+
+        a:hover::before {
+            content: "-> ";
+            font-weight: 800;
+        }
+
+        a:hover {
+            transform: translateX(10px);
+            transition: 0.3s;
+            color: rgba(0, 0, 0, 0.671);
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bg .collecti {
+        display: none !important;
+    }
+}
+
+/*Navbar - Pages Hover...............................................*/
+
+.bg .pages {
+    height: 250px;
+    width: 15%;
+    border: 1px Solid white;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    margin-top: 120px;
+    border-radius: 10px;
+    margin-left: 900px;
+    display: none;
+    z-index: 999;
+
+    ul {
+        list-style-type: none;
+        margin-top: 20px;
+
+
+
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li {
+        margin-left: 10px;
+        margin-top: 9px;
+        font-weight: 600;
+    }
+}
+
+.bg .pages:hover {
+    box-shadow: 0px 0px 20px 5px white;
+
+}
+
+.pages li:hover {
+    transform: translateX(15px);
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .bg .pages {
+        display: none !important;
+    }
+}
+
+/*LATEST FASHION...............................................*/
+
+.bg .brand {
+    height: auto;
+    /* remove fixed height */
+    width: 80%;
+    /* responsive width instead of fixed 700px */
+    max-width: 700px;
+    /* don’t grow too big on large screens */
+    /*border: 1px solid white;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+
+
+
+    p {
+        color: rgba(255, 255, 255, 0.834);
+        font-size: clamp(28px, 8vw, 80px);
+        font-family: "Tagesschrift", system-ui;
+    }
+
+    .p2 {
+        font-size: clamp(8px, 3vw, 18px);
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .bg .brand {
+        top: 120px;
+    }
+}
+
+@media(max-width: 768px) {
+    .bg .brand {
+        top: 140px;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    /* added a subtle scale effect */
+    animation: fadescale 1s ease forwards;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadescale {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.account {
+    margin-top: 80px;
+    height: auto;
+    width: auto;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.account .form {
+    flex: 1 1 45%;
+    min-width: 350;
+    max-width: 70%;
+    background-color: #f5f2ee;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: var(--font3);
+}
+
+.account-created {
+    height: 400px;
+    width: 30%;
+    border: 1px solid white;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 150px;
+    left: 32%;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.account-created.show {
+
+    opacity: 1;
+    transform: scale(1);
+}
+
+.account-created:hover {
+    box-shadow: 0px 0px 20px 5px green;
+}
+
+.account-created {
+    i {
+        font-size: 120px;
+        color: green;
+    }
+
+    p {
+        font-size: 28px;
+        font-family: var(--font2)
+    }
+}
+
+@media (max-width:425px){
+    .account-created{
+        width: 50%;
+        left: 25%;
+        top: 50%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        p{
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}

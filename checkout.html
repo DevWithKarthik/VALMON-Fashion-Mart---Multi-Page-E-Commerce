@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container-fluid navbar">
+            <div class="nav1">
+                <img src="logo.png" alt="" height="30px">
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="shop"><a href="shop.html">Shop</a></li>
+                    <li id="Cllhover"><a href="collections.html">Collection</a></li>
+                    <li id="Pghover"><a href="#">Pages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+           
+        </div>
+
+        <div class="shopscroll">
+            <div class="container scroll1">
+                <div class="ss1">
+                    <ul>
+                        <li> <a href="#">MEN</a></li>
+                        <li>Jeans</li>
+                        <li>Trousers</li>
+                        <li>Swimwear</li>
+                        <li>Casual shirts</li>
+                        <li>Rain jackets</li>
+                        <li>Loungewear</li>
+                    </ul>
+
+                </div>
+                <div class="ss2">
+                    <ul>
+                        <li> <a href="#">WOMEN</a></li>
+                        <li>Dupattas</li>
+                        <li>Leggins</li>
+                        <li>Ethnic wears</li>
+                        <li>Kurtas & Suits</li>
+                        <li>Western wear</li>
+                        <li>Dress Materials</li>
+                    </ul>
+
+                </div>
+                <div class="ss3">
+                    <ul>
+                        <li> <a href="#">KIDS</a></li>
+                        <li>Dresses</li>
+                        <li>Jumpsits</li>
+                        <li>Trackpants</li>
+                        <li>Ethnic Wear</li>
+                        <li>Value packages</li>
+                        <li>Loungewear</li>
+                    </ul>
+
+                </div>
+                <div class="ss4">
+                    <ul>
+                        <li> <a href="#">UNISEX</a></li>
+                        <li>Tops</li>
+                        <li>Dresses</li>
+                        <li>Shorts</li>
+                        <li>Swimwear</li>
+                        <li>Jeasn</li>
+                        <li>Jackets</li>
+                    </ul>
+
+                </div>
+                <div class="ss5">
+                    <ul>
+                        <li> <a href="#">ACCESSORIES</a></li>
+                        <li>Shoes</li>
+                        <li>Scarves</li>
+                        <li>Watches</li>
+                        <li>Wristwear</li>
+                        <li>Backpacks</li>
+                        <li>Sunglasses</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="container scroll2">
+                <img src="shop1.jpg" alt="">
+                <img src="shop2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container-fluid collecti" id="collections"> </div>
+
+        <div class="pages" id="Pages">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Checkout</a></li>
+            </ul>
+        </div>
+
+        <div class="brand" id="brand">
+            <p>CHECKOUT</p>
+            <P class="p2"><a href="index.html">Home > Checkout</a></P>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <div class="fomrstyle">
+            <form action="https://api.web3forms.com/submit" method="POST" class="row g-3">
+                <input type="hidden" name="access_key" value="dd41348d-d633-43a7-b04b-fdb51e4c46a0">
+                <input type="hidden" name="redirect" value="submit.html">
+                <div class="col-md-6">
+                    <label for="inputFirstname" class="form-label">First name
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="inputFirstname" name="firstname" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputlastname" class="form-label">Last Name
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="inputlastname" name="lastname" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputEmail4" class="form-label">Email-id
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="@gmail.com" name="email" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputCity" class="form-label">State
+                        <span class="text-danger">*</span>
+                    </label>
+                    <select id="inputCity" class="form-select" name="state" required>
+                        <option selected>State</option>
+                        <option>Tamil Nadu</option>
+                        <option>Karnataka</option>
+                        <option>Telangana</option>
+                        <option>National Capital Region</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">City
+                        <span class="text-danger">*</span>
+                    </label>
+                    <select id="inputState" class="form-select" name="city" required>
+                        <option selected>City</option>
+                        <option>Chennai</option>
+                        <option>Bangalore</option>
+                        <option>Coimbatore</option>
+                        <option>Hyderabad</option>
+                        <option>Pune</option>
+                        <option>Ahmedabad</option>
+                        <option>Mumbai</option>
+                        <option>Delhi</option>
+                        <option>Gurgaon</option>
+                        <option>Noida</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <p style="font-size: 22px; font-weight: 600; background-color: wheat;">Address</p>
+                </div>
+                <div class="col-md-5">
+                    <label for="inputstreet" class="form-label">Door No
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="inputstreet" placeholder="6/373" name="door_no" required>
+                </div>
+                <div class="col-md-5">
+                    <label for="inutarea" class="form-label">Street Name
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="inutarea" placeholder="Nandha Nagar" name="street_name" required>
+                </div>
+                <div class="col-12">
+                    <label for="inutAddress" class="form-label">Full Address
+                        <span class="text-danger">*</span>
+                    </label>
+                    <textarea type="text" class="form-control" id="inutAddress" placeholder="Main area"
+                        rows="4" name="fulladdress"></textarea>
+                </div>
+                <div class="col-12"
+                    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                    <div class="col-md-3">
+                        <label for="inputphone" class="form-label">Phone Number
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" id="inputphone" class="form-control" placeholder="+01 4555 575 2485" name="phonenumber" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inputZip" class="form-label">Post code
+                            <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="inputZip" name="zipcode" required>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <label for="inputorder" class="form-label">Order Notes (Optional)</label>
+                    <textarea id="inputorder" rows="5" class="form-control"
+                        placeholder="Any Speical Notes: Gift Wrap or any special mentions" name="ordernotes"></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                            <span class="text-danger">*</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>

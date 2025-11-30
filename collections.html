@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Fashion Mart</title>
+    <link rel="stylesheet" href="collections.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container-fluid navbar">
+
+            <!--Hamburger icon for mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav1">
+                <img src="logo.png" alt="" height="30px">
+            </div>
+            <div class="nav2">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="shop"><a href="shop.html">Shop</a></li>
+                    <li id="Cllhover"><a href="collections.html">Collection</a></li>
+                    <li id="Pghover"><a href="#">Pages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav3">
+                <ul>
+                    <form action="#" class="search">
+                        <li class="sicon" style="cursor: pointer;" onclick="open4()"><i class="fa-solid fa-magnifying-glass"
+                            ></i> Search
+                        </li>
+                        <div class="search10" id="serch_result">
+                            <p>What are you looking for ?</p>
+                            <i class="fa-solid fa-x" onclick="close4()" style="cursor: pointer;"></i>
+                            <input type="text" placeholder="Search..." id="searchitem" class="input1" required>
+                            <button type="submit"  onclick="searching(event)">
+                                <i class="fa-solid fa-magnifying-glass" ></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </ul>
+            </div>
+        </div>
+
+        <div class="searchbar" id="searchresult">
+            <div>
+                <i class="fa-solid fa-x" onclick="close2()"></i>
+            </div>
+            <div class="nav6" id="searchmenu"></div>
+        </div>
+
+        <div class="shopscroll">
+            <div class="container scroll1">
+                <div class="ss1">
+                    <ul>
+                        <li> <a href="shop.html">MEN</a></li>
+                        <li>Jeans</li>
+                        <li>Trousers</li>
+                        <li>Swimwear</li>
+                        <li>Casual shirts</li>
+                        <li>Rain jackets</li>
+                        <li>Loungewear</li>
+                    </ul>
+
+                </div>
+                <div class="ss2">
+                    <ul>
+                        <li> <a href="shop.html">WOMEN</a></li>
+                        <li>Dupattas</li>
+                        <li>Leggins</li>
+                        <li>Ethnic wears</li>
+                        <li>Kurtas & Suits</li>
+                        <li>Western wear</li>
+                        <li>Dress Materials</li>
+                    </ul>
+
+                </div>
+                <div class="ss3">
+                    <ul>
+                        <li> <a href="shop.html">KIDS</a></li>
+                        <li>Dresses</li>
+                        <li>Jumpsits</li>
+                        <li>Trackpants</li>
+                        <li>Ethnic Wear</li>
+                        <li>Value packages</li>
+                        <li>Loungewear</li>
+                    </ul>
+
+                </div>
+                <div class="ss4">
+                    <ul>
+                        <li> <a href="shop.html">UNISEX</a></li>
+                        <li>Tops</li>
+                        <li>Dresses</li>
+                        <li>Shorts</li>
+                        <li>Swimwear</li>
+                        <li>Jeasn</li>
+                        <li>Jackets</li>
+                    </ul>
+
+                </div>
+                <div class="ss5">
+                    <ul>
+                        <li> <a href="shop.html">ACCESSORIES</a></li>
+                        <li>Shoes</li>
+                        <li>Scarves</li>
+                        <li>Watches</li>
+                        <li>Wristwear</li>
+                        <li>Backpacks</li>
+                        <li>Sunglasses</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="container scroll2">
+                <img src="shop1.jpg" alt="">
+                <img src="shop2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container-fluid collecti" id="collections"> </div>
+
+        <div class="pages" id="Pages">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="account.html" class="present">Account</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="checkout.html" class="present">Checkout</a></li>
+            </ul>
+        </div>
+
+        <div class="brand" id="brand">
+            <p>COLLECTIONS</p>
+            <P class="p2"><a href="#">Home > Collections</a></P>
+        </div>
+    </div>
+
+    <div class="welcome">
+        <p>Welcome</p>
+        <p>To</p>
+        <p><u>Collections - Sections</u></p>
+    </div>
+
+    <div class="collections-list" id="collect-list">
+
+    </div>
+
+    <div class="Get-offer">
+        <ul>
+            <i class="fa-duotone fa-solid fa-star"></i>
+            <p>Get offer today !</p>
+        </ul>
+        <ul aria-hidden="true">
+            <i class="fa-duotone fa-solid fa-star"></i>
+            <p>Get offer today !</p>
+        </ul>
+        <ul aria-hidden="true">
+            <i class="fa-duotone fa-solid fa-star"></i>
+            <p>Get offer today !</p>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer1">
+            <ul>
+                <li class="head">Our Company</li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Shipping & Delivery</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer2">
+            <ul>
+                <li class="head">CATEGORIES</li>
+                <li><a href="#">Men's</a></li>
+                <li><a href="#">Women's</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">New Arrival</a></li>
+                <li><a href="#">Best seller</a></li>
+            </ul>
+        </div>
+        <div class="footer3">
+            <ul>
+                <li class="head">Quick Links</li>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Order tracking</a></li>
+                <li><a href="#">Our store</a></li>
+                <li><a href="#">Size guide</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer4">
+            <ul>
+                <li class="head">Say hellow!</li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://x.com/?lang=en-in">Twitter</a></li>
+                <li><a href="www.linkedin.com/in/karthik912">Linked in</a></li>
+            </ul>
+        </div>
+        <div class="footer5">
+            <ul>
+                <li class="join head">Join our newsletter for exclusive offers!</li>
+                <li><input type="email" placeholder="Enter you email"></li>
+                <li><input type="checkbox" class="check"> I agree to the privacy policy.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="copyrights">
+        <p>© 2025 Crafto is Proudly Powered by <a href="#">Karthik M</a></p>
+        <img src="logo-white.png" alt="" height="35px">
+        <p>Privacy policy  | Terms of service</p>
+    </div>
+
+
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="collections.js"></script>
+</body>
+
+</html>
