@@ -84,7 +84,7 @@ body.loaded>*:not(#preloader) {
 .bg {
     height: 773px;
     width: auto;
-    background-image: url(/Jawabg-2.png);
+    background-image: url(Jawabg-1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top;
@@ -95,7 +95,7 @@ body.loaded>*:not(#preloader) {
 }
 
 .bg:hover {
-    background-image: url(/jawabg-2\ -\ Copy.png);
+    background-image: url(jawabg-2\ -\ Copy.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
