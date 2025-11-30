@@ -1452,13 +1452,14 @@ body {
 /*.....................COpyrights...................................*/
 
 .copyrights {
-    height: 80px;
+    height: auto;
     background-color: #423a34;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     border-top: 1px solid white;
+    flex-wrap: wrap;
 
 
     p {
@@ -1472,25 +1473,15 @@ body {
     }
 }
 
-.copyrights :nth-child(3):hover {
-    color: white;
-    transition: 0.3s;
-}
-
-.welcome {
-    margin-top: 80px;
+.copyrights>div{
+    height: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    min-width: 300px;
     justify-content: center;
 }
 
-.welcome>p:nth-child(1) {
-    font-size: 45px;
-    font-family: var(--font3);
-}
-
-.welcome>p:nth-child(3) {
-    font-size: 25px;
-    font-family: var(--font3);
+.copyrights :nth-child(3):hover {
+    color: white;
+    transition: 0.3s;
 }
