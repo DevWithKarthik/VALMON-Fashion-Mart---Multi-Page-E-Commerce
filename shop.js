@@ -101,18 +101,18 @@ data.map((values) => {
 var result12 = document.getElementById("result12");
 
 const data1 = [
-  { img: "Product-01.jpg", p1: "Deconstructed shirt", p2: "$320", cart: "ADD TO CART", p3: "Casual shirt", color: "white", size: ["l", "xl", "xxl"] },
-  { img: "Product-02.jpg", p1: "Linen silk blend jumper", p2: "$149", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "black", size: ["l", "xl", "xxl"] },
-  { img: "Product-03.jpg", p1: "Rouleau vest", p2: "$399", cart: "ADD TO CART", p3: "Vest sleeveless Swimmers", color: "grey", size: ["s", "l"] },
-  { img: "Product-04.jpg", p1: "Vertical textured polo", p2: "$399", cart: "ADD TO CART", p3: "T-shirt Tshirt polo", color: "green", size: ["xl", "xxl"] },
-  { img: "Product-05.jpg", p1: "Cotton crochet tank", p2: "$199", cart: "ADD TO CART", p3: "Winter Jacket", color: "maroon", size: ["xxl", "xl", "l"] },
-  { img: "Product-06.jpg", p1: "Basic slim fit t-shirt", p2: "$199", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "white", size: ["l", "xl", "xxl"] },
-  { img: "Product-07.jpg", p1: "Cotton slim scoop tank", p2: "$149", cart: "ADD TO CART", p3: "Formal shirt cotton", color: "blue", size: ["l", "xl", "xxl"] },
-  { img: "Product-13.jpg", p1: "Draped cowl top", p2: "$399", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt Sweatshirt top", color: "white", size: ["l", "s"] },
-  { img: "Product-09.jpg", p1: "Viscose shell top", p2: "$289", cart: "ADD TO CART", p3: "Black Top T-shirt Tshirt Sleeveless top", color: "black", size: ["s", "l"] },
-  { img: "Product-10.jpg", p1: "Wool blend sweater", p2: "$209", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt sweater", color: "white", size: ["xl", "l"] },
-  { img: "Product-11.jpg", p1: "Slim Fit Polo t-shirt", p2: "$189", cart: "ADD TO CART", p3: "T-shirt Formal Collar Tshirt Polo", color: "blue", size: ["l", "xl", "xxl"] },
-  { img: "Product-12.jpg", p1: "Cotton Crochet Tank", p2: "$489", cart: "ADD TO CART", p3: "Top Sleeveless Cotton Swimmers", color: "white", size: ["s","l","m"] }
+  { img: "product-01.jpg", p1: "Deconstructed shirt", p2: "$320", cart: "ADD TO CART", p3: "Casual shirt", color: "white", size: ["l", "xl", "xxl"] },
+  { img: "product-02.jpg", p1: "Linen silk blend jumper", p2: "$149", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "black", size: ["l", "xl", "xxl"] },
+  { img: "product-03.jpg", p1: "Rouleau vest", p2: "$399", cart: "ADD TO CART", p3: "Vest sleeveless Swimmers", color: "grey", size: ["s", "l"] },
+  { img: "product-04.jpg", p1: "Vertical textured polo", p2: "$399", cart: "ADD TO CART", p3: "T-shirt Tshirt polo", color: "green", size: ["xl", "xxl"] },
+  { img: "product-05.jpg", p1: "Cotton crochet tank", p2: "$199", cart: "ADD TO CART", p3: "Winter Jacket", color: "maroon", size: ["xxl", "xl", "l"] },
+  { img: "product-06.jpg", p1: "Basic slim fit t-shirt", p2: "$199", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "white", size: ["l", "xl", "xxl"] },
+  { img: "product-07.jpg", p1: "Cotton slim scoop tank", p2: "$149", cart: "ADD TO CART", p3: "Formal shirt cotton", color: "blue", size: ["l", "xl", "xxl"] },
+  { img: "product-13.jpg", p1: "Draped cowl top", p2: "$399", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt Sweatshirt top", color: "white", size: ["l", "s"] },
+  { img: "product-09.jpg", p1: "Viscose shell top", p2: "$289", cart: "ADD TO CART", p3: "Black Top T-shirt Tshirt Sleeveless top", color: "black", size: ["s", "l"] },
+  { img: "product-10.jpg", p1: "Wool blend sweater", p2: "$209", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt sweater", color: "white", size: ["xl", "l"] },
+  { img: "product-11.jpg", p1: "Slim Fit Polo t-shirt", p2: "$189", cart: "ADD TO CART", p3: "T-shirt Formal Collar Tshirt Polo", color: "blue", size: ["l", "xl", "xxl"] },
+  { img: "product-12.jpg", p1: "Cotton Crochet Tank", p2: "$489", cart: "ADD TO CART", p3: "Top Sleeveless Cotton Swimmers", color: "white", size: ["s","l","m"] }
 ];
 
 const observer = new IntersectionObserver((entries) => {
