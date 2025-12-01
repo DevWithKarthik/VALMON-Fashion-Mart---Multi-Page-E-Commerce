@@ -239,14 +239,8 @@ function searching(event) {
                 background-position: top;
                 background-size: cover;
                 background-repeat: no-repeat;">
-                <p class="p2">${value.p2}</p>
                 <p class="p1">${value.p1}</p>
-                <i class="fa-regular fa-heart heart"></i>
-                <i class="fa-solid fa-eye eyes"></i>
-                <button onclick='add("${value.img}", "${value.p1}", "${value.p2}")'>
-                    <i class="fa-solid fa-suitcase-rolling"></i> ${value.cart}
-                </button>
-
+                <p class="p2">${value.p2}</p>
             </div>`;
     });
 }
