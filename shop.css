@@ -627,7 +627,7 @@ body {
 }
 
 /* =============================== */
-/* 📱 Mobile View (≤ 412px)       */
+/* Mobile View (≤ 412px)       */
 /* =============================== */
 @media screen and (max-width: 412px) {
     .cart {
@@ -1011,6 +1011,24 @@ body {
     }
 }
 
+/*.....................welcome..............................*/
+.welcome {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome>p:nth-child(1) {
+    font-size: 45px;
+    font-family: var(--font3);
+}
+
+.welcome>p:nth-child(3) {
+    font-size: 25px;
+    font-family: var(--font3);
+}
 
 /* ===================== GENERAL SHOPPING LAYOUT ===================== */
 
