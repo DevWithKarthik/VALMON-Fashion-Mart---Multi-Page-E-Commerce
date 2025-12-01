@@ -41,10 +41,11 @@ body {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
     .bg {
         transition: 0.3s;
         height: 250px;
+        background-position: left;
     }
 }
 
@@ -874,18 +875,23 @@ body {
 
 .searchbar .nav6>div {
     .p1 {
-        color: rgb(128, 60, 0);
+        color: rgb(104, 14, 9);
     }
 }
 
 
-@media (max-width: 416px) {
+@media (max-width: 430px) {
     .searchbar .nav6>div {
-        height: 250px;
-        flex-basis: 80%;
+        height: 200px;
+        flex-basis: 40%;
 
         .p1 {
-            font-size: 16px !important;
+            font-size: 12px !important;
+        }
+
+        .p2{
+            padding: 5px 10px !important;
+            font-size: 12px !important;
         }
     }
 }
