@@ -125,6 +125,13 @@ body.loaded>*:not(#preloader) {
     }
 }
 
+@media (max-width: 430px){
+    .bg{
+        transition: 0.3s;
+        height: 340px;
+    }
+}
+
 /*....................Navbar..............................*/
 
 .bg .navbar {
@@ -250,7 +257,7 @@ body.loaded>*:not(#preloader) {
         flex-grow: 0;
     }
 
-    /* ✅ Hamburger visible on mobile */
+    /* Hamburger visible on mobile */
     .menu-icon {
         display: flex;
         align-items: center;
@@ -269,7 +276,7 @@ body.loaded>*:not(#preloader) {
         transform: scale(0.9);
     }
 
-    /* ✅ Logo */
+    /* Logo */
     .bg .navbar .nav1 {
         flex-grow: 0;
         padding-left: 0;
@@ -284,7 +291,7 @@ body.loaded>*:not(#preloader) {
         display: none;
     }
 
-    /* ✅ Mobile dropdown when toggled by JS */
+    /* Mobile dropdown when toggled by JS */
     .bg .navbar .nav2.open {
         display: flex;
         justify-content: center;
@@ -307,7 +314,7 @@ body.loaded>*:not(#preloader) {
         padding: 0;
     }
 
-    /* ✅ Right section (search + cart) */
+    /* Right section (search + cart) */
     .bg .navbar .nav3 {
         display: flex;
         align-items: center;
@@ -338,7 +345,7 @@ body.loaded>*:not(#preloader) {
         color: #333;
     }
 
-    /* ✅ Search overlay responsiveness */
+    /* Search overlay responsiveness */
     .search10 {
         width: 90%;
         height: auto;
@@ -638,7 +645,6 @@ body.loaded>*:not(#preloader) {
     font-weight: 600;
 }
 
-/* 🖥️ Medium Laptop / Large Tablet (≤ 912px) */
 @media screen and (max-width: 912px) {
     .cart {
         width: 45%;
@@ -671,9 +677,7 @@ body.loaded>*:not(#preloader) {
     }
 }
 
-/* =============================== */
-/* 📱 Tablet View (≤ 768px)       */
-/* =============================== */
+
 @media screen and (max-width: 768px) {
     .cart {
         width: 60%;
@@ -702,14 +706,12 @@ body.loaded>*:not(#preloader) {
     }
 }
 
-/* =============================== */
-/* 📱 Mobile View (≤ 412px)       */
-/* =============================== */
-@media screen and (max-width: 412px) {
+
+@media screen and (max-width: 430px) {
     .cart {
-        width: 90%;
+        width: 80% !important;
         right: 5%;
-        left: 5%;
+        left: 15%;
         top: 80px;
         padding: 10px;
         border-radius: 12px;
@@ -721,7 +723,7 @@ body.loaded>*:not(#preloader) {
     }
 
     .cart div {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         gap: 8px;
         text-align: center;
@@ -732,16 +734,16 @@ body.loaded>*:not(#preloader) {
     }
 
     .cart .p1 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .cart .p2 {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .cart i.fa-x {
         font-size: 16px;
-        align-self: flex-end;
+        align-self: flex-start;
         margin-right: 8px;
         color: #444;
     }
@@ -897,106 +899,46 @@ body.loaded>*:not(#preloader) {
     height: 350px;
     /* border: 1px solid;*/
     flex-basis: 20%;
-
     background-image: url(product-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 
 
 
     .p1 {
-        position: absolute;
-        bottom: 50px;
-        left: 20%;
         font-size: 1.2vw;
         font-weight: 600;
         font-family: "Tagesschrift", system-ui;
+        text-align: center;
+        color: brown;
     }
 
     .p2 {
-        position: absolute;
-        bottom: 0;
-        left: 40%;
         padding: 5px 20px;
         color: white;
         font-weight: 600;
         background: rgb(121, 111, 111);
         border-radius: 10px;
     }
-
-    .heart {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 10px 10px 0px 0px;
-        border: 1px solid;
-        padding-right: 35px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        border-radius: 50%;
-        background-color: white;
-        border-color: transparent;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-
-    }
-
-    .eyes {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        margin: 10px 10px 0px 0px;
-        border: 1px solid;
-        padding-right: 35px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        border-radius: 50%;
-        background-color: white;
-        border-color: transparent;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-
-    }
-
-    button {
-
-        position: absolute;
-        bottom: 5%;
-        left: 20%;
-        padding-top: clamp(5px, 2vw, 15px);
-        padding-bottom: clamp(5px, 2vw, 15px);
-        padding-right: clamp(30px, 2vw, 70px);
-        padding-left: clamp(30px, 2vw, 70px);
-        font-size: clamp(8px, 2vw, 14px);
-        font-weight: 600;
-        border-radius: 10px;
-        background-color: white;
-        border-color: transparent;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.3s ease;
-
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
 }
 
-@media (max-width: 416px) {
+@media (max-width: 430px) {
     .searchbar .nav6>div {
-        height: 250px;
-        flex-basis: 80%;
+        height: 200px;
+        flex-basis: 40%;
 
         .p1 {
-            font-size: 16px !important;
+            font-size: 12px !important;
+        }
+
+        .p2{
+            padding: 5px 10px !important;
+            font-size: 12px !important;
         }
     }
 }
@@ -1023,7 +965,7 @@ body.loaded>*:not(#preloader) {
 
     p {
         color: rgba(255, 255, 255, 0.834);
-        font-size: clamp(28px, 8vw, 80px);
+        font-size: clamp(20px, 6vw, 80px);
         font-family: "Tagesschrift", system-ui;
     }
 
@@ -1034,6 +976,13 @@ body.loaded>*:not(#preloader) {
         top: 200px;
     }
 }
+
+@media (max-width: 430px) {
+    .bg .brand {
+        top: 120px;
+    }
+}
+
 
 .fade-in {
     opacity: 0;

@@ -172,9 +172,8 @@ function searching(event) {
                 background-position: top;
                 background-size: cover;
                 background-repeat: no-repeat;">
+                <p class="p1">${value.p1}</p>
                 <p class="p2">${value.p2}</p>
-                <p class="p1" style="text-align: center;">${value.p1}</p>
-
             </div>`;
     });
 }
