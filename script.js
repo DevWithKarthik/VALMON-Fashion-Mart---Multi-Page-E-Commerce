@@ -112,39 +112,46 @@ data.map((values) => {
 
 //Products//
 
-var productsRoll = document.getElementById("products-roll")
+const track = document.getElementById("productsRollTrack");
 
 var data1 = [
     { img: "product-01.jpg", p1: "Deconstructed shirt", p2: "$320", cart: "ADD TO CART", p3: "Casual shirt", color: "white", size: ["l", "xl", "xxl"], prid: "cd1" },
-    { img: "product-02.jpg", p1: "Linen silk blend jumper", p2: "$149", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "black", size: ["l", "xl", "xxl"], prid: "cd2"},
+    { img: "product-02.jpg", p1: "Linen silk blend", p2: "$149", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "black", size: ["l", "xl", "xxl"], prid: "cd2"},
     { img: "product-03.jpg", p1: "Rouleau vest", p2: "$399", cart: "ADD TO CART", p3: "Vest sleeveless Swimmers", color: "grey", size: ["s", "l"], prid: "cd3"  },
     { img: "product-04.jpg", p1: "Vertical textured polo", p2: "$399", cart: "ADD TO CART", p3: "T-shirt Tshirt polo", color: "green", size: ["xl", "xxl"], prid: "cd4"  },
     { img: "product-05.jpg", p1: "Cotton crochet tank", p2: "$199", cart: "ADD TO CART", p3: "Winter Jacket", color: "maroon", size: ["xxl", "xl", "l"], prid: "cd5"  },
     { img: "product-06.jpg", p1: "Basic slim fit t-shirt", p2: "$199", cart: "ADD TO CART", p3: "T-shirt Tshirt", color: "white", size: ["l", "xl", "xxl"], prid: "cd6"  },
-    { img: "product-07.jpg", p1: "Cotton slim scoop tank", p2: "$149", cart: "ADD TO CART", p3: "Formal shirt cotton", color: "blue", size: ["l", "xl", "xxl"], prid: "cd7"  },
+    { img: "product-07.jpg", p1: "Cotton slim scoop", p2: "$149", cart: "ADD TO CART", p3: "Formal shirt cotton", color: "blue", size: ["l", "xl", "xxl"], prid: "cd7"  },
     { img: "product-13.jpg", p1: "Draped cowl top", p2: "$399", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt Sweatshirt top", color: "white", size: ["l", "s"], prid: "cd8"  },
     { img: "product-09.jpg", p1: "Viscose shell top", p2: "$289", cart: "ADD TO CART", p3: "Black Top T-shirt Tshirt Sleeveless top", color: "black", size: ["s", "l"], prid: "cd9"  },
     { img: "product-10.jpg", p1: "Wool blend sweater", p2: "$209", cart: "ADD TO CART", p3: "Winter T-shirt Tshirt sweater", color: "white", size: ["xl", "l"], prid: "cd10"  }
 ]
 
-// Clear container before inserting
-productsRoll.innerHTML = "";
+// Build HTML for products
+let html = "";
 
-// Loop and add product cards
-data1.forEach((values) => {
-    productsRoll.innerHTML += `
-        <div class="pd1 ${values.prid}">
-            <p class="p1">${values.p1}</p> 
-            <p class="p2">${values.p2}</p>
+data1.forEach((v) => {
+    html += `
+        <div class="pd1 ${v.prid}" 
+                style="background-image: url(${v.img});
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;">
+            <p class="p1">${v.p1}</p> 
+            <p class="p2">${v.p2}</p>
             <i class="fa-regular fa-heart heart"></i>
             <i class="fa-solid fa-eye eyes"></i>
-            <button onclick= 'add("${values.img}", "${values.p1}", "${values.p2}")'>
+            <button onclick= 'add("${v.img}", "${v.p1}", "${v.p2}")'>
                 <a href="#">
-                    <i class="fa-solid fa-suitcase-rolling"></i> ${values.cart}
+                    <i class="fa-solid fa-suitcase-rolling"></i> ${v.cart}
                 </a>
             </button>
-        </div>`;
+        </div>
+    `;
 });
+
+// Duplicate once → seamless infinite loop
+track.innerHTML = html + html;
 
 //Function Add to cart
 
