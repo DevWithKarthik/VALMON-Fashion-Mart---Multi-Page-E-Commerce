@@ -51,4 +51,4 @@ Add login/signup with validation
 # 🙌 Author
 
 Karthik M
-Front-End Developer | JavaScript | Bootstrap
+Python Full Stack Developer | JavaScript | Bootstrap
